@@ -2,7 +2,7 @@
 # This role install nginx, configures it
 
 - name: Install nginx and certbot
-  apt: name={{ item }} state=latest update_cache=yes
+  apt: name={{ item }} state=latest update_cache=yes default_release=stretch-backports
   with_items:
      - nginx
      - letsencrypt
